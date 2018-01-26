@@ -2,9 +2,35 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: 'Raleway', sans-serif !important;
 }
 
-form {
-  margin-top: 5vh;
+body{
+  color: white;
+  background-image: url("../assets/images/nightsky.jpg");
+  height: 50.6vh;
+  width: 30vw;
+  background-repeat: no-repeat;
+}
+
+h1{
+  position: relative;
+  top: 5vh;
   text-align: center;
 }
+
+form{
+  position: relative;
+  top: 8em;
+  text-align: center;
+}
+button, input{
+  padding: 0.5em 2em;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  border: 0.2 solid white;
+  color: white;
+  background-color: rgba(50, 50, 54, 0.3);
+  border-radius: 4px;
+};
