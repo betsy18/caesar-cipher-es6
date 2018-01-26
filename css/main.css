@@ -1,0 +1,10 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+form {
+  margin-top: 5vh;
+  text-align: center;
+}
