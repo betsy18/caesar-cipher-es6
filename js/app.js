@@ -7,9 +7,9 @@ $(document).ready(() => {
       // llamamos a la funcion a ejecutar
       cipher(text); 
       $('#text').val('');
+      // $('.container-tex > p').val('');
     } else {
       alert('Error vuelva a ingresar el texto'); 
-      $('#text').val('');
     }  
   });
 
@@ -19,6 +19,8 @@ $(document).ready(() => {
     if (text !== '' && text.replace(/[^0-9]/g, ' ') !== text) { 
       // llamamos a la funcion a ejecutar
       decipher(text); 
+      $('#text').val('');
+      // $('.container-tex > p').val('');
     } else {
       alert('Error vuelva a ingresar el texto'); 
     }
@@ -30,6 +32,8 @@ $(document).ready(() => {
   // función para las letras minúsculas
   const lowerCase = (text) => text === text.toLowerCase();
 
+  // funcion para limpiar las cajas de texto
+  const clean = (text) => text.val('');
   // función cifrado
   const cipher = (text) => {
     let textCipher = '';
@@ -55,10 +59,12 @@ $(document).ready(() => {
     let textChar = '';
     for (var i = 0; i < text.length; i++) {
       if (capitalLetter(text)) {
-        textChar = (text.charCodeAt(i) - 65 - 7) % 26 + 65;
+        // se le suma el -7 a las mayus y min  y luego se le 
+        // agrega el + 52 que representa las dos vueltas al abc
+        textChar = (text.charCodeAt(i) - 20) % 26 + 65;
       } 
       if (lowerCase(text)) {
-        textChar = (text.charCodeAt(i) - 97 - 7) % 26 + 97;
+        textChar = (text.charCodeAt(i) - 52) % 26 + 97;
       }
       // convirtiendo el texto en cifrado en cod ASCII
       textDecipher += String.fromCharCode(textChar);

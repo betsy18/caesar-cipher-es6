@@ -8,14 +8,14 @@
 body{
   color: white;
   background-image: url("../assets/images/nightsky.jpg");
-  height: 50.6vh;
-  width: 30vw;
+  /* height: 50.6vh;
+  width: 30vw; */
   background-repeat: no-repeat;
 }
 
 h1{
   position: relative;
-  top: 5vh;
+  top: 10vh;
   text-align: center;
 }
 
